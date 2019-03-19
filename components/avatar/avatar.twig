@@ -1,0 +1,19 @@
+{#
+    Variables Example
+    {
+        text: string,
+        size: AvatarSize,
+        style: AvatarStyle,
+        isRounded: AvatarIsRounded,
+    }
+#}
+
+{% set blockClass = 'nbl-avatar' %}
+
+{% set styleClass = 'style_' ~ style %}
+{% set sizeClass = 'size_' ~ size %}
+{% set roundClass = 'isRounded_' ~ size %}
+
+<div class="{{ blockClass }} {{ styleClass }} {{ sizeClass }} {{ roundClass }}">
+    {{ text|first }}
+</div>
